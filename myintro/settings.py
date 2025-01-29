@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-vs@^12r0w%f)-3t76l2jyy1g@4#0x*kc^o#c(_c9bh+7ii04c5"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,15 +82,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "myintro.wsgi.application"
 
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 
 # Password validation
@@ -141,6 +137,6 @@ REST_FRAMEWORK = {
 }
 
 # Personal Details
-EMAIL_ADDRESS = "joborfrederick@gmail.com"
-GITHUB_URL = "https://github.com/Jobor-Marho/HNG12-Backend"
+EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS")
+GITHUB_URL = os.environ.get("GITHUB_URL")
 
