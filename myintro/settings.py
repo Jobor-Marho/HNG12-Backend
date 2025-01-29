@@ -103,7 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # CORS Config
-# CORS_ALLOWED_ORIGINS = True
+CORS_ALLOWED_ORIGINS = "introapp-ybyf.onrender.com"
 USE_X_FORWARDED_HOST = True
 CORS_ORIGIN_ALLOW_ALL = True
 # Internationalization
