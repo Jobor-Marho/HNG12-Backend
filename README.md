@@ -1,83 +1,114 @@
-Project Name:
-Introapp.
+# Introapp
 
-Description:
-This project provides a simple API that returns basic information, including the current date and time, an email address, and a GitHub URL. The API is designed to be used as part of a backend service, and can be accessed via a GET request to the /api/intro/ endpoint.
+## Description
 
-Setup Instructions:
+This project provides a simple API that returns basic information, including the current date and time, an email address, and a GitHub URL. The API is designed to be used as part of a backend service and can be accessed via a GET request to the `/api/intro/` endpoint.
+
+## Setup Instructions
+
 To run this project locally, follow these steps:
 
-Prerequisites:
-Make sure you have Python 3.x installed on your local machine.
+### Prerequisites
 
-Steps to Set Up Locally ->
-Clone the repository:
+- Make sure you have Python 3.12.7++ installed on your local machine.
 
-First, clone the repository to your local machine using:
+### Steps to Set Up Locally
 
--> git clone <repository_url>
--> cd <project_directory>
+1. **Clone the repository:**
 
-Create a virtual environment:
-It's recommended to use a virtual environment for this project. You can create one with the following command:
--> python3 -m venv venv
+   First, clone the repository to your local machine using:
 
-Activate the virtual environment:
+   ```bash
+   git clone <repository_url>
+   cd <project_directory>
+   ```
 
-On macOS/Linux:
--> source venv/bin/activate
+2. **Create a virtual environment:**
 
-On Windows:
--> venv\Scripts\activate
+   It's recommended to use a virtual environment for this project. You can create one with the following command:
 
-Install dependencies:
-Use the requirements.txt file to install all necessary dependencies:
+   ```bash
+   python3 -m venv venv
+   ```
 
--> pip install -r requirements.txt
+3. **Activate the virtual environment:**
 
-Run the application:
-Now, you can run the Django application locally:
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
 
--> python manage.py runserver
+4. **Install dependencies:**
 
-Access the API:
+   Use the `requirements.txt` file to install all necessary dependencies:
 
-Your application should now be running at http://127.0.0.1:8000/. The api/intro/ endpoint can be accessed at:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-http://127.0.0.1:8000/api/intro/
+5. **Run the application:**
 
-API Documentation:
--> Endpoint: /api/intro/
-Request
--> Method: GET
--> URL: /api/intro/
+   Now, you can run the Django application locally:
 
-No request body is needed. Simply send a GET request to the endpoint.
+   ```bash
+   python manage.py runserver
+   ```
 
-Response Format:
-The response will be in JSON format and will include the following fields:
+6. **Access the API:**
 
-{
-"email": "email@example.com",
-"current_datetime": "2025-01-29T16:21:01Z",
-"github_url": "https://github.com/example"
-}
+   Your application should now be running at `http://127.0.0.1:8000/`. The `/api/intro/` endpoint can be accessed at:
 
--> email: A string containing the email address.
--> current_datetime: A string containing the current UTC date and time in ISO 8601 format.
--> github_url: A string containing the URL to the GitHub profile or repository.
+   ```
+   http://127.0.0.1:8000/api/intro/
+   ```
 
-Example Usage ->
+## API Documentation
+
+### Endpoint: `/api/intro/`
+
+- **Request:**
+
+  - **Method:** GET
+  - **URL:** `/api/intro/`
+  - **Request Body:** None
+
+- **Response Format:**
+  The response will be in JSON format and will include the following fields:
+
+  ```json
+  {
+    "email": "email@example.com",
+    "current_datetime": "2025-01-29T16:21:01Z",
+    "github_url": "https://github.com/example"
+  }
+  ```
+
+  - **email:** A string containing the email address.
+  - **current_datetime:** A string containing the current UTC date and time in ISO 8601 format.
+  - **github_url:** A string containing the URL to the GitHub profile or repository.
+
+### Example Usage
+
 To get the information, send a GET request to the following URL:
 
+```
 GET http://127.0.0.1:8000/api/intro/
-Sample Response:
+```
 
+**Sample Response:**
+
+```json
 {
-"email": "email@example.com",
-"current_datetime": "2025-01-29T16:21:01Z",
-"github_url": "https://github.com/example"
+  "email": "email@example.com",
+  "current_datetime": "2025-01-29T16:21:01Z",
+  "github_url": "https://github.com/example"
 }
+```
 
-Backlink -> 
-If you're looking to hire a Python developer, check out this [Python Developer Hiring page](https://hng.tech/hire/python-developers).
+## Backlink
+
+If you're looking to hire a Python developer, check out this [Python Developer Hiring page](https://example.com/hire-python-developer).
